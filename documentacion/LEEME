@@ -2,5 +2,4 @@ Aqui encontraras toda la documentacion con la especificaciones de desarrollo.
 
 Para ver los diagramas necesitas utilizar la herramienta Dia.
 En la carpeta de "Diagramas ER" encontrar la documentacion correspondinete a la parte de base de datos que utiliza veaXML.  Debes utilizar la herramienta ERMaster(Plugin de Eclipse).
-En la carpera Exportado encontraras los diagramas en formato grafico(png, jpg, etc), 
-para su vializacion en caso de no contar con una herramienta.
+En la carpera Exportado encontraras los diagramas en formato grafico(png, jpg, etc), para su vializacion en caso de no contar con una herramienta.
