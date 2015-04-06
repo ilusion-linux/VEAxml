@@ -4,69 +4,110 @@ insert into estado(estado) values('No implementado', 'Descripcion');
 insert into estado(estado) values('Descontinuado', 'Descripcion');
 
 --Formatos de Documento
-insert into formato(descripcion) values('XML', );
-insert into formato(descripcion) values('XSD');
-insert into formato(descripcion) values('DTD');
+insert into formato(descripcion) values('XML', 2);
+insert into formato(descripcion) values('XSD', 2);
+insert into formato(descripcion) values('DTD', 2);
 
---Tipos Primmitivos
-insert into tipo_primitivo(tipo_primitivo) values("string");
-insert into tipo_primitivo(tipo_primitivo) values("boolean");
-insert into tipo_primitivo(tipo_primitivo) values("decimal");
-insert into tipo_primitivo(tipo_primitivo) values("float");
-insert into tipo_primitivo(tipo_primitivo) values("double");
-insert into tipo_primitivo(tipo_primitivo) values("duration");
-insert into tipo_primitivo(tipo_primitivo) values("dateTime");
-insert into tipo_primitivo(tipo_primitivo) values("time");
-insert into tipo_primitivo(tipo_primitivo) values("date");
-insert into tipo_primitivo(tipo_primitivo) values("gYearMonth");
-insert into tipo_primitivo(tipo_primitivo) values("gYear");
-insert into tipo_primitivo(tipo_primitivo) values("gMonthDay");
-insert into tipo_primitivo(tipo_primitivo) values("gDay");
-insert into tipo_primitivo(tipo_primitivo) values("gMonth");
-insert into tipo_primitivo(tipo_primitivo) values("hexBinary");
-insert into tipo_primitivo(tipo_primitivo) values("base64Binary");
-insert into tipo_primitivo(tipo_primitivo) values("anyURI");
-insert into tipo_primitivo(tipo_primitivo) values("QName");
-insert into tipo_primitivo(tipo_primitivo) values("NOTATION");
+--Namespace
+insert into namespace(namespace, url) values('fn',      'http://www.w3.org/2005/xpath-functions');
+insert into namespace(namespace, url) values('html',    'http://www.w3.org/1999/xhtml');
+insert into namespace(namespace, url) values('my',      null);
+insert into namespace(namespace, url) values('rddl',    'http://www.rddl.org/');
+insert into namespace(namespace, url) values('vc',      'http://www.w3.org/2007/XMLSchema-versioning');
+insert into namespace(namespace, url) values('xhtml',   'http://www.w3.org/1999/xhtml');
+insert into namespace(namespace, url) values('xlink',   'http://www.w3.org/1999/xlink');
+insert into namespace(namespace, url) values('xml',     'http://www.w3.org/XML/1998/namespace');
+insert into namespace(namespace, url) values('xs',      'http://www.w3.org/2001/XMLSchema');
+insert into namespace(namespace, url) values('xsi',     'http://www.w3.org/2001/XMLSchema-instance');
+insert into namespace(namespace, url) values('xsl',     'http://www.w3.org/1999/XSL/Transform');
 
-insert into tipo_primitivo(tipo_primitivo) values("normalizedString");
-insert into tipo_primitivo(tipo_primitivo) values("token");
-insert into tipo_primitivo(tipo_primitivo) values("language");
-insert into tipo_primitivo(tipo_primitivo) values("NMTOKEN");
-insert into tipo_primitivo(tipo_primitivo) values("NMTOKENS");
-insert into tipo_primitivo(tipo_primitivo) values("Name");
-insert into tipo_primitivo(tipo_primitivo) values("NCName");
-insert into tipo_primitivo(tipo_primitivo) values("ID");
-insert into tipo_primitivo(tipo_primitivo) values("IDREF");
-insert into tipo_primitivo(tipo_primitivo) values("IDREFS");
-insert into tipo_primitivo(tipo_primitivo) values("ENTITY");
-insert into tipo_primitivo(tipo_primitivo) values("ENTITIES");
-insert into tipo_primitivo(tipo_primitivo) values("integer");
-insert into tipo_primitivo(tipo_primitivo) values("nonPositiveInteger");
-insert into tipo_primitivo(tipo_primitivo) values("negativeInteger");
-insert into tipo_primitivo(tipo_primitivo) values("long");
-insert into tipo_primitivo(tipo_primitivo) values("int");
-insert into tipo_primitivo(tipo_primitivo) values("short");
-insert into tipo_primitivo(tipo_primitivo) values("byte");
-insert into tipo_primitivo(tipo_primitivo) values("nonNegativeInteger");
-insert into tipo_primitivo(tipo_primitivo) values("unsignedLong");
-insert into tipo_primitivo(tipo_primitivo) values("unsignedInt");
-insert into tipo_primitivo(tipo_primitivo) values("unsignedShort");
-insert into tipo_primitivo(tipo_primitivo) values("unsignedByte");
-insert into tipo_primitivo(tipo_primitivo) values("positiveInteger");
-insert into tipo_primitivo(tipo_primitivo) values("yearMonthDuration");
-insert into tipo_primitivo(tipo_primitivo) values("dayTimeDuration");
-insert into tipo_primitivo(tipo_primitivo) values("dateTimeStamp");
-
---Tipo de Facetas
-insert into tipo_faceta(tipo_faceta) values('Facetas');
-insert into tipo_faceta(tipo_faceta) values('Facetas Fundamentales');
+--Formatos Namespace
+insert into formato_namespace(id_formato, id_namespace) select 2, n.namespace from namespace n;
 
 --Tipos internos
 insert into tipo_interno(tipo_interno) values('Entero positivo');
 insert into tipo_interno(tipo_interno) values('String');
 insert into tipo_interno(tipo_interno) values('Tipo base');
-insert into tipo_interno(tipo_interno) values('');
+insert into tipo_interno(tipo_interno) values('Boolean');
+insert into tipo_interno(tipo_interno) values('Decimal');
+insert into tipo_interno(tipo_interno) values('Date');
+insert into tipo_interno(tipo_interno) values('Time');
+insert into tipo_interno(tipo_interno) values('DateTime');
+insert into tipo_interno(tipo_interno) values('Mes+Anio');
+insert into tipo_interno(tipo_interno) values('Anio');
+insert into tipo_interno(tipo_interno) values('Mes+Dia');
+insert into tipo_interno(tipo_interno) values('Dia');
+insert into tipo_interno(tipo_interno) values('Mes');
+insert into tipo_interno(tipo_interno) values('Periodo');
+insert into tipo_interno(tipo_interno) values('URI');
+insert into tipo_interno(tipo_interno) values('Entero');
+insert into tipo_interno(tipo_interno) values('Entero Negativo');
+insert into tipo_interno(tipo_interno) values('Entero No Positivo');
+insert into tipo_interno(tipo_interno) values('Long');
+insert into tipo_interno(tipo_interno) values('Short');
+insert into tipo_interno(tipo_interno) values('Byte');
+insert into tipo_interno(tipo_interno) values('Long unsigned');
+insert into tipo_interno(tipo_interno) values('Int unsigned');
+insert into tipo_interno(tipo_interno) values('Short unsigned');
+insert into tipo_interno(tipo_interno) values('Byte unsigned');
+insert into tipo_interno(tipo_interno) values('Periodo Anio+Mes');
+insert into tipo_interno(tipo_interno) values('Periodo Dia');
+
+--Clase de tipos
+insert into tipo_clasificacion(clasificacion) values('Primitive Datatypes');
+insert into tipo_clasificacion(clasificacion) values('Other Built-in Datatypes');
+
+--Tipos
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("string",			   2, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("boolean",		   4, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("decimal",		   5, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("float",			   5, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("double",			   5, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("duration",          14, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("dateTime",		   8, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("time",			   7, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("date",			   6, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("gYearMonth",		   9, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("gYear"			   10, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("gMonthDay",         11, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("gDay",              12, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("gMonth",            13, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("hexBinary",         2, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("base64Binary",      2, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("anyURI",            15, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("QName",             2, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("NOTATION",          2, 1);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("normalizedString",  2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("token",             2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("language",          2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("NMTOKEN",           2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("NMTOKENS",          2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("Name",              2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("NCName",            2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("ID",                2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("IDREF",             2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("IDREFS",            2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("ENTITY",            2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("ENTITIES",          2, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("integer",           16, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("nonPositiveInteger",18, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("negativeInteger",   17, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("long",              19, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("int",               16, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("short",             20, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("byte",              21, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("nonNegativeInteger",1, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("unsignedLong",      22, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("unsignedInt",       23, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("unsignedShort",     24, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("unsignedByte",      25, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("positiveInteger",   26, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("yearMonthDuration", 27, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values("dayTimeDuration",   8, 2);
+
+--Tipo de Facetas
+insert into tipo_faceta(tipo_faceta) values('Constraining Facets');
+insert into tipo_faceta(tipo_faceta) values('Facetas Fundamentales');
 
 --Facetas tipo: Facetas Fundamentales
 insert into faceta(faceta, 	id_tipo_faceta) values('ordenado', 2);
@@ -123,3 +164,6 @@ insert into faceta_valor_admitido(id_faceta, id_valor) values(10, 7);
 insert into faceta_valor_admitido(id_faceta, id_valor) values(18, 8);
 insert into faceta_valor_admitido(id_faceta, id_valor) values(18, 9);
 insert into faceta_valor_admitido(id_faceta, id_valor) values(18, 10);
+
+--Tipos con facetas validas
+insert into facetas_tipo(id_tipo, id_face, valor) values();

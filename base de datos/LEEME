@@ -1,5 +1,5 @@
-Aca econtranra los archivos .sql necesarios para crear los esquemas de base de datos utilizados por veaXML.
+En este directorio econtrara los archivos .sql necesarios para crear los esquemas de base de datos utilizados por veaXML.
 
-veaXML.sqlite base de datos SQLite utiliza para guardas datos de manera local. Se recomienta utilizar el complemente de firefox "SQLite Manager", para su uso.
-veaXML.sql contiene el DDL necesario para replicar el esquema.
-contenido veaXML.sql contiene el DML necesario para los datos iniciales de veaXML.sql
+veaXML.sqlite         base de datos SQLite utiliza para guardas datos de manera local. Se recomienta utilizar el complemente de firefox "SQLite Manager", para su uso y manipulacion.
+veaXML.sql            contiene el DDL necesario para replicar el esquema.
+contenido veaXML.sql  contiene el DML necesario para los datos iniciales de veaXML.sql
