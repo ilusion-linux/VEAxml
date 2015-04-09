@@ -5,8 +5,8 @@ DROP TABLE [elemento];
 DROP TABLE [formato_namespace];
 DROP TABLE [formato];
 DROP TABLE [estado];
-DROP TABLE [facetas_tipo];
 DROP TABLE [faceta_valor_admitido];
+DROP TABLE [facetas_tipo];
 DROP TABLE [faceta];
 DROP TABLE [namespace];
 DROP TABLE [tipo];
@@ -45,6 +45,15 @@ CREATE TABLE [formato]
 	[id_estado] integer NOT NULL,
 	FOREIGN KEY ([id_estado])
 	REFERENCES [estado] ([id])
+);
+
+
+-- Primitive Datatypes
+-- Other Built-in Datatypes
+CREATE TABLE [tipo_clasificacion]
+(
+	[id] integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+	[clasificacion] text NOT NULL UNIQUE
 );
 
 
@@ -110,15 +119,6 @@ CREATE TABLE [tipo_interno]
 );
 
 
--- Primitive Datatypes
--- Other Built-in Datatypes
-CREATE TABLE [tipo_clasificacion]
-(
-	[id] integer NOT NULL PRIMARY KEY AUTOINCREMENT,
-	[clasificacion] text NOT NULL UNIQUE
-);
-
-
 -- 3.3 Primitive Datatypes
 --         3.3.1 string
 --         3.3.2 boolean
@@ -175,10 +175,10 @@ CREATE TABLE [tipo]
 	[tipo] text NOT NULL UNIQUE,
 	[id_tipo_interno] integer NOT NULL,
 	[id_tipo_clasificacion] integer NOT NULL,
-	FOREIGN KEY ([id_tipo_interno])
-	REFERENCES [tipo_interno] ([id]),
 	FOREIGN KEY ([id_tipo_clasificacion])
-	REFERENCES [tipo_clasificacion] ([id])
+	REFERENCES [tipo_clasificacion] ([id]),
+	FOREIGN KEY ([id_tipo_interno])
+	REFERENCES [tipo_interno] ([id])
 );
 
 
@@ -233,7 +233,7 @@ CREATE TABLE [faceta]
 	[id] integer NOT NULL PRIMARY KEY AUTOINCREMENT,
 	[faceta] text NOT NULL UNIQUE,
 	[id_tipo_faceta] integer NOT NULL,
-	[id_tipo_interno] integer NOT NULL,
+	[id_tipo_interno] integer,
 	FOREIGN KEY ([id_tipo_interno])
 	REFERENCES [tipo_interno] ([id]),
 	FOREIGN KEY ([id_tipo_faceta])
@@ -249,7 +249,6 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	pattern
 -- 	enumeration
--- 	whiteSpace
 -- 	assertions
 -- 	
 -- 	ordered = false
@@ -919,11 +918,11 @@ CREATE TABLE [faceta]
 CREATE TABLE [facetas_tipo]
 (
 	[id_tipo] integer NOT NULL,
-	[id_face] integer NOT NULL,
+	[id_faceta] integer NOT NULL,
 	[valor] text,
 	FOREIGN KEY ([id_tipo])
 	REFERENCES [tipo] ([id]),
-	FOREIGN KEY ([id_face])
+	FOREIGN KEY ([id_faceta])
 	REFERENCES [faceta] ([id])
 );
 
@@ -1018,10 +1017,10 @@ CREATE TABLE [formato_namespace]
 (
 	[id_formato] integer NOT NULL,
 	[id_namespace] integer NOT NULL,
-	FOREIGN KEY ([id_formato])
-	REFERENCES [formato] ([id]),
 	FOREIGN KEY ([id_namespace])
-	REFERENCES [namespace] ([id])
+	REFERENCES [namespace] ([id]),
+	FOREIGN KEY ([id_formato])
+	REFERENCES [formato] ([id])
 );
 
 
