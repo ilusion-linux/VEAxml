@@ -21,10 +21,10 @@ DROP TABLE [valor];
 /* Create Tables */
 
 -- Estados en que se puede encontra los tipos de archivos soportado por veaXML
--- 
+--
 -- Implementado, Descripcion
 -- No implementado, Descripcion
--- 
+--
 -- Descontinuado, Descripcion
 CREATE TABLE [estado]
 (
@@ -34,7 +34,7 @@ CREATE TABLE [estado]
 
 
 -- Tabla para almacenar los formatos que soporta veaXML.
--- 
+--
 -- XML
 -- XSD
 -- DTD
@@ -58,59 +58,59 @@ CREATE TABLE [tipo_clasificacion]
 
 
 -- Tipo interno, utilizado en java, para la verificacion de valores:
--- 
+--
 -- Entero positivo
--- 
+--
 -- String
--- 
+--
 -- Tipo base
--- 
+--
 -- Boolean
--- 
+--
 -- Decimal
--- 
+--
 -- Date
--- 
+--
 -- Time
--- 
+--
 -- DateTime
--- 
+--
 -- Mes+Anio
--- 
+--
 -- Anio
--- 
+--
 -- Mes+Dia
--- 
+--
 -- Dia
--- 
+--
 -- Mes
--- 
+--
 -- Periodo
--- 
+--
 -- URI
--- 
+--
 -- Entero
--- 
+--
 -- Entero Negativo
--- 
+--
 -- Entero No Positivo
--- 
+--
 -- Long
--- 
+--
 -- Short
--- 
+--
 -- Byte
--- 
+--
 -- Long unsigned
--- 
+--
 -- Int unsigned
--- 
+--
 -- Short unsigned
--- 
+--
 -- Byte unsigned
--- 
+--
 -- Periodo Anio+Mes
--- 
+--
 -- Periodo Dia
 CREATE TABLE [tipo_interno]
 (
@@ -139,7 +139,7 @@ CREATE TABLE [tipo_interno]
 --         3.3.17 anyURI
 --         3.3.18 QName
 --         3.3.19 NOTATION
--- 
+--
 -- 3.4 Other Built-in Datatypes
 --         3.4.1 normalizedString
 --         3.4.2 token
@@ -197,7 +197,7 @@ CREATE TABLE [elemento]
 
 
 -- Tipo de facetas:
--- 
+--
 -- 4.3 Constraining Facets
 -- 4.2 Facetas Fundamentales
 CREATE TABLE [tipo_faceta]
@@ -222,11 +222,11 @@ CREATE TABLE [tipo_faceta]
 --         4.3.12 fractionDigits
 --         4.3.13 Assertions
 --         4.3.14 explicitTimezone
--- 
+--
 -- 4.2 Facetas Fundamentales
--- 		4.2.1 ordenado 
--- 		4.2.2 delimitada 
--- 		4.2.3 cardinalidad 
+-- 		4.2.1 ordenado
+-- 		4.2.2 delimitada
+-- 		4.2.3 cardinalidad
 -- 		4.2.4 numerico
 CREATE TABLE [faceta]
 (
@@ -250,7 +250,7 @@ CREATE TABLE [faceta]
 -- 	pattern
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -259,7 +259,7 @@ CREATE TABLE [faceta]
 -- 	pattern
 -- 	whiteSpace = collapse
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = finite
@@ -273,7 +273,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = true
 -- 	cardinality = finite
@@ -287,7 +287,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = true
 -- 	cardinality = finite
@@ -303,7 +303,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -317,7 +317,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -332,7 +332,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -347,7 +347,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -362,7 +362,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -377,7 +377,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -392,7 +392,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -407,7 +407,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -422,7 +422,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -437,7 +437,7 @@ CREATE TABLE [faceta]
 -- 	minExclusive
 -- 	assertions
 -- 	explicitTimezone = optional
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -450,7 +450,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	whiteSpace = collapse
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -463,7 +463,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	whiteSpace = collapse
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -476,7 +476,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	whiteSpace = collapse
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -489,7 +489,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	whiteSpace = collapse
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -502,7 +502,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	whiteSpace = collapse
 -- 	assertions
--- 
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -516,11 +516,11 @@ CREATE TABLE [faceta]
 -- 	pattern
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
--- 	numeric = false	
+-- 	numeric = false
 -- token
 -- 	whiteSpace = collapse
 -- 	length
@@ -529,11 +529,11 @@ CREATE TABLE [faceta]
 -- 	pattern
 -- 	enumeration
 -- 	assertions
--- 
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
--- 	numeric = false	
+-- 	numeric = false
 -- language
 -- 	pattern = [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*
 -- 	whiteSpace = collapse
@@ -542,7 +542,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -555,7 +555,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -568,7 +568,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	pattern
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -581,7 +581,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -594,7 +594,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -607,7 +607,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -620,7 +620,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -633,7 +633,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	pattern
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -646,7 +646,7 @@ CREATE TABLE [faceta]
 -- 	maxLength
 -- 	enumeration
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -659,7 +659,7 @@ CREATE TABLE [faceta]
 -- 	enumeration
 -- 	pattern
 -- 	assertions
--- 	
+--
 -- 	ordered = false
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -675,7 +675,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -691,7 +691,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -707,7 +707,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -723,7 +723,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -739,7 +739,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -755,7 +755,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -771,7 +771,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -787,7 +787,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -803,7 +803,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -819,7 +819,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -835,7 +835,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -851,7 +851,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = true
 -- 	cardinality = finite
@@ -867,7 +867,7 @@ CREATE TABLE [faceta]
 -- 	maxExclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = total
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -881,7 +881,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -895,7 +895,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -910,7 +910,7 @@ CREATE TABLE [faceta]
 -- 	minInclusive
 -- 	minExclusive
 -- 	assertions
--- 	
+--
 -- 	ordered = partial
 -- 	bounded = false
 -- 	cardinality = countably infinite
@@ -947,7 +947,7 @@ CREATE TABLE [valor]
 -- 	numerico
 -- 		true
 -- 		false
--- 		
+--
 -- Valores Facetas
 -- 	length
 -- 		Entero positivo
@@ -993,7 +993,7 @@ CREATE TABLE [faceta_valor_admitido]
 
 
 -- --Namespaces identificados para archivos XML Schema
--- 
+--
 -- fn obligado a http://www.w3.org/2005/xpath-functions
 -- html unido a http://www.w3.org/1999/xhtml
 -- my
@@ -1022,6 +1022,3 @@ CREATE TABLE [formato_namespace]
 	FOREIGN KEY ([id_formato])
 	REFERENCES [formato] ([id])
 );
-
-
-

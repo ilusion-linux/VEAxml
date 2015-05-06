@@ -13,22 +13,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.zacapalug.veaxml;
 
-import org.zacapalug.veaxml.gui.MenuPrincipal;
+package org.zacapalug.veaxml.gui.componentes;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JTabbedPane;
+import org.zacapalug.veaxml.gui.PanelInicio;
 
 /**
  *
  * @author ghots
  */
-public class VeaXML
-{
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args)
+public class PanelTabs extends JTabbedPane
+{   
+    public PanelTabs()
     {
-        MenuPrincipal principal=new MenuPrincipal();
-        principal.setVisible(true);
+        super();
+        
+         Icon icono1=new ImageIcon(PanelInicio.class.getResource("iconos/cerrar.png"));
+        
+        this.addTab("Panel A", icono1, new PanelInicio(this));
+        
     }
 }

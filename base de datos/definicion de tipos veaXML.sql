@@ -31,6 +31,7 @@ insert into tipo_interno(tipo_interno) values('DateTimeStamp');
 --Clase de tipos
 insert into tipo_clasificacion(clasificacion) values('Primitive Datatypes');
 insert into tipo_clasificacion(clasificacion) values('Other Built-in Datatypes');
+insert into tipo_clasificacion(clasificacion) values('Definicion extra');
 
 --Tipos
 insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('string',			   2, 1);
@@ -80,10 +81,12 @@ insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('positiveI
 insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('yearMonthDuration', 27, 2);
 insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('dayTimeDuration',   28, 2);
 insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('dateTimeStamp',     29, 2);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('nameElement',       2,  3);
+insert into tipo(tipo, id_tipo_interno, id_tipo_clasificacion) values('simpleTypeOrBuilt', 2,  3);
 
 --Tipo de Facetas
 insert into tipo_faceta(tipo_faceta) values('Constraining Facets');
-insert into tipo_faceta(tipo_faceta) values('Facetas Fundamentales');
+insert into tipo_faceta(tipo_faceta) values('Fundamental Facets');
 
 --Facetas tipo: Facetas Fundamentales
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('ordered',      2, null);
@@ -95,7 +98,7 @@ insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('length',			
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('minLength',		1, 1);
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('maxLength',		1, 1);
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('pattern',			1, 2);
-insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('enumeration', 		1, 2);
+insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('enumeration', 		1, 3);
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('whiteSpace',       1, null);
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('maxInclusive', 	1, 3);
 insert into faceta(faceta, 	id_tipo_faceta, id_tipo_interno) values('maxExclusive', 	1, 3);

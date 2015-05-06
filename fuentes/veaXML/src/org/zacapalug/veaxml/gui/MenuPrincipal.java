@@ -1,4 +1,5 @@
 /*
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +13,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package veaxml.gui;
+package org.zacapalug.veaxml.gui;
+
+import javax.swing.JFrame;
+import org.zacapalug.veaxml.gui.componentes.PanelTabs;
 
 /**
  *
@@ -27,6 +31,7 @@ public class MenuPrincipal extends javax.swing.JFrame
     public MenuPrincipal()
     {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -38,7 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JPanel pnlProyectos = new javax.swing.JPanel();
         javax.swing.JPanel pnlArchivos = new javax.swing.JPanel();
         javax.swing.JPanel pnlAreaRenderizadora = new javax.swing.JPanel();
-        javax.swing.JTabbedPane tabAreas = new javax.swing.JTabbedPane();
+        javax.swing.JTabbedPane tabAreas = new PanelTabs();
         javax.swing.JLabel lblMsgCorto = new javax.swing.JLabel();
         javax.swing.JLabel lblMsgInformtivo = new javax.swing.JLabel();
         javax.swing.JMenuBar barMenuPrincipal = new javax.swing.JMenuBar();
@@ -59,7 +64,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JMenuItem itmDonativo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veaxml/gui/idiomas/MenuPrincipal"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("org/zacapalug/veaxml/gui/idiomas/MenuPrincipal"); // NOI18N
         setTitle(bundle.getString("MenuPrincipal.title")); // NOI18N
 
         pnlAreaTrabajo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -75,7 +80,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         );
         pnlProyectosLayout.setVerticalGroup(
             pnlProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGap(0, 434, Short.MAX_VALUE)
         );
 
         tabTrabajo.addTab(bundle.getString("MenuPrincipal.pnlProyectos.TabConstraints.tabTitle"), pnlProyectos); // NOI18N
@@ -88,7 +93,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         );
         pnlArchivosLayout.setVerticalGroup(
             pnlArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGap(0, 434, Short.MAX_VALUE)
         );
 
         tabTrabajo.addTab(bundle.getString("MenuPrincipal.pnlArchivos.TabConstraints.tabTitle"), pnlArchivos); // NOI18N
@@ -110,11 +115,11 @@ public class MenuPrincipal extends javax.swing.JFrame
         pnlAreaRenderizadora.setLayout(pnlAreaRenderizadoraLayout);
         pnlAreaRenderizadoraLayout.setHorizontalGroup(
             pnlAreaRenderizadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabAreas, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
+            .addComponent(tabAreas)
         );
         pnlAreaRenderizadoraLayout.setVerticalGroup(
             pnlAreaRenderizadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabAreas, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+            .addComponent(tabAreas)
         );
 
         pnlAreaTrabajo.setRightComponent(pnlAreaRenderizadora);
@@ -127,16 +132,24 @@ public class MenuPrincipal extends javax.swing.JFrame
 
         mnuArchivo.setText(bundle.getString("MenuPrincipal.mnuArchivo.text")); // NOI18N
 
+        itmAbrir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
         itmAbrir.setText(bundle.getString("MenuPrincipal.itmAbrir.text")); // NOI18N
         mnuArchivo.add(itmAbrir);
 
+        itmGuardar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
         itmGuardar.setText(bundle.getString("MenuPrincipal.itmGuardar.text")); // NOI18N
         mnuArchivo.add(itmGuardar);
 
         itmGuardarCopia.setText(bundle.getString("MenuPrincipal.itmGuardarCopia.text")); // NOI18N
         mnuArchivo.add(itmGuardarCopia);
 
+        itmSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
         itmSalir.setText(bundle.getString("MenuPrincipal.itmSalir.text")); // NOI18N
+        itmSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmSalirActionPerformed(evt);
+            }
+        });
         mnuArchivo.add(itmSalir);
 
         barMenuPrincipal.add(mnuArchivo);
@@ -182,14 +195,14 @@ public class MenuPrincipal extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlAreaTrabajo)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lblMsgInformtivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblMsgInformtivo, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblMsgCorto, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlAreaTrabajo)
+                .addComponent(pnlAreaTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMsgCorto)
@@ -198,6 +211,11 @@ public class MenuPrincipal extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itmSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_itmSalirActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 }

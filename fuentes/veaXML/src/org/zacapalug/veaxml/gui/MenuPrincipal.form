@@ -1,64 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="barMenuPrincipal">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="mnuArchivo">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuArchivo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuArchivo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itmAbrir">
               <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+A"/>
+                </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmAbrir.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmAbrir.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmGuardar">
               <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+G"/>
+                </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmGuardar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmGuardar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmGuardarCopia">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmGuardarCopia.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmGuardarCopia.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmSalir">
               <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+F4"/>
+                </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmSalir.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmSalir.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmSalirActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnuEditar">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuEditar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuEditar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itmBuscar">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmBuscar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmBuscar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmReemplazar">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmReemplazar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmReemplazar.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
@@ -67,28 +79,28 @@
         <Menu class="javax.swing.JMenu" name="mnuConfig">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuConfig.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuConfig.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itmOpcionesGenerales">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmOpcionesGenerales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmOpcionesGenerales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmCambiarIdioma">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmCambiarIdioma.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmCambiarIdioma.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmCambiarTema">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmCambiarTema.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmCambiarTema.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
@@ -97,21 +109,21 @@
         <Menu class="javax.swing.JMenu" name="mnuAyuda">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuAyuda.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuAyuda.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itmAcercaDe">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmAcercaDe.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmAcercaDe.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmDonativo">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmDonativo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.itmDonativo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </MenuItem>
@@ -123,7 +135,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-      <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+      <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -134,7 +146,7 @@
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_formBundle" type="java.lang.String" value="veaxml/gui/idiomas/MenuPrincipal"/>
+    <AuxValue name="FormSettings_formBundle" type="java.lang.String" value="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal"/>
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="true"/>
@@ -149,7 +161,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="pnlAreaTrabajo" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
-              <Component id="lblMsgInformtivo" max="32767" attributes="0"/>
+              <Component id="lblMsgInformtivo" pref="719" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblMsgCorto" min="-2" pref="89" max="-2" attributes="0"/>
           </Group>
@@ -158,7 +170,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="pnlAreaTrabajo" max="32767" attributes="0"/>
+              <Component id="pnlAreaTrabajo" pref="464" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblMsgCorto" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -213,7 +225,7 @@
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName="tab1">
                         <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.pnlProyectos.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.pnlProyectos.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </JTabbedPaneConstraints>
                     </Constraint>
@@ -227,7 +239,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="492" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="434" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -237,7 +249,7 @@
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName="tab2">
                         <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.pnlArchivos.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.pnlArchivos.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </JTabbedPaneConstraints>
                     </Constraint>
@@ -251,7 +263,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="492" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="434" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -270,17 +282,20 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tabAreas" alignment="0" pref="685" max="32767" attributes="0"/>
+                  <Component id="tabAreas" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tabAreas" alignment="0" pref="520" max="32767" attributes="0"/>
+                  <Component id="tabAreas" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="tabAreas">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new PanelTabs()"/>
+              </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
             </Container>
@@ -291,7 +306,7 @@
     <Component class="javax.swing.JLabel" name="lblMsgCorto">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.lblMsgCorto.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.lblMsgCorto.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -303,7 +318,7 @@
     <Component class="javax.swing.JLabel" name="lblMsgInformtivo">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.lblMsgInformtivo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.lblMsgInformtivo.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">

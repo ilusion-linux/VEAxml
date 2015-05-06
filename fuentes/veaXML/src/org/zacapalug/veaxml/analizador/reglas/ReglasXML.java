@@ -13,22 +13,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.zacapalug.veaxml;
 
-import org.zacapalug.veaxml.gui.MenuPrincipal;
+package org.zacapalug.veaxml.analizador.reglas;
 
 /**
  *
  * @author ghots
  */
-public class VeaXML
+public class ReglasXML extends Reglas
 {
+
     /**
-     * @param args the command line arguments
+     *
      */
-    public static void main(String[] args)
+    public ReglasXML()
     {
-        MenuPrincipal principal=new MenuPrincipal();
-        principal.setVisible(true);
+        super();
     }
 }
