@@ -294,7 +294,7 @@
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="tabAreas">
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new PanelTabs()"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo()"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>

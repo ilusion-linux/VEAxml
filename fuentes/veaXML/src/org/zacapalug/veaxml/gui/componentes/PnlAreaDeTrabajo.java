@@ -16,8 +16,6 @@
 
 package org.zacapalug.veaxml.gui.componentes;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
 import org.zacapalug.veaxml.gui.PanelInicio;
 
@@ -25,15 +23,21 @@ import org.zacapalug.veaxml.gui.PanelInicio;
  *
  * @author ghots
  */
-public class PanelTabs extends JTabbedPane
+public class PnlAreaDeTrabajo extends JTabbedPane
 {   
-    public PanelTabs()
+    public PnlAreaDeTrabajo()
     {
-        super();
         
-         Icon icono1=new ImageIcon(PanelInicio.class.getResource("iconos/cerrar.png"));
+        PanelInicio inicio=new PanelInicio(this);
+        this.addTab("Panel Inicio", inicio);
+        inicio.personalizarTab();
         
-        this.addTab("Panel A", icono1, new PanelInicio(this));
+        PanelInicio inicio2=new PanelInicio(this);
+        this.addTab("Panel Inicio 2", inicio2);
+        inicio2.personalizarTab();
         
+        PanelInicio inicio3=new PanelInicio(this);
+        this.addTab("Panel Inicio 3", inicio3);
+        inicio3.personalizarTab();
     }
 }

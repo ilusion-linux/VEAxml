@@ -15,8 +15,7 @@
  */
 package org.zacapalug.veaxml.gui;
 
-import javax.swing.JFrame;
-import org.zacapalug.veaxml.gui.componentes.PanelTabs;
+import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
 
 /**
  *
@@ -31,7 +30,6 @@ public class MenuPrincipal extends javax.swing.JFrame
     public MenuPrincipal()
     {
         initComponents();
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -43,7 +41,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JPanel pnlProyectos = new javax.swing.JPanel();
         javax.swing.JPanel pnlArchivos = new javax.swing.JPanel();
         javax.swing.JPanel pnlAreaRenderizadora = new javax.swing.JPanel();
-        javax.swing.JTabbedPane tabAreas = new PanelTabs();
+        javax.swing.JTabbedPane tabAreas = new PnlAreaDeTrabajo();
         javax.swing.JLabel lblMsgCorto = new javax.swing.JLabel();
         javax.swing.JLabel lblMsgInformtivo = new javax.swing.JLabel();
         javax.swing.JMenuBar barMenuPrincipal = new javax.swing.JMenuBar();
@@ -211,9 +209,16 @@ public class MenuPrincipal extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void itmSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmSalirActionPerformed
+//<editor-fold defaultstate="collapsed" desc="Funciones Privadas">
+    public void cerrandoPrograma()
+    {
+        //Verficando tabs sin guardar y los pasos correspondientes para cerrar,
+        //guardando estados importantes
         System.exit(0);
+    }
+//</editor-fold>
+    private void itmSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmSalirActionPerformed
+        cerrandoPrograma();
     }//GEN-LAST:event_itmSalirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

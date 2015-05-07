@@ -111,7 +111,7 @@ insert into componente(componente, id_tipo, lista) values('minOccurs',          
 insert into componente(componente, id_tipo, lista) values('final',                  null,1);
 insert into componente(componente, id_tipo, lista) values('final',                  null,0);
 insert into componente(componente, id_tipo, lista) values('itemType',               49,  0);
-insert into componente(componente, id_tipo, lista) values('itemType',               49,  1);
+insert into componente(componente, id_tipo, lista) values('memberTypes',            49,  1);
 
 --Componente Valor Admitido
 --form: qualified | unqualified
