@@ -15,6 +15,7 @@
  */
 package org.zacapalug.veaxml;
 
+import java.awt.Rectangle;
 import org.zacapalug.veaxml.gui.MenuPrincipal;
 
 /**
@@ -23,12 +24,49 @@ import org.zacapalug.veaxml.gui.MenuPrincipal;
  */
 public class VeaXML
 {
+    private static MenuPrincipal principal;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
-        MenuPrincipal principal=new MenuPrincipal();
+        Propiedades.cargarPropiedades();
+        principal=new MenuPrincipal();
         principal.setVisible(true);
+        
+        Runtime.getRuntime().addShutdownHook(new Thread()
+        {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    cierreNoEsperado();
+                }
+                catch(InterruptedException e)
+                {
+                    System.out.println(e.getMessage());
+                }
+            }
+        });
+    }
+    
+    /**
+     *
+     */
+    public static void reinicarVentana()
+    {
+        Rectangle savedBounds=principal.getBounds();
+        principal.dispose();
+        
+        principal=new MenuPrincipal();
+        principal.setBounds(savedBounds);
+        principal.setVisible(true);
+    }
+    
+    private static void cierreNoEsperado() throws InterruptedException
+    {
+        System.out.println("**************");
     }
 }

@@ -15,7 +15,13 @@
  */
 package org.zacapalug.veaxml.gui;
 
-import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
+import java.awt.Rectangle;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import org.zacapalug.veaxml.GUIProperties;
+import org.zacapalug.veaxml.VeaXML;
 
 /**
  *
@@ -35,13 +41,14 @@ public class MenuPrincipal extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        javax.swing.ButtonGroup look_feel = new javax.swing.ButtonGroup();
         javax.swing.JSplitPane pnlAreaTrabajo = new javax.swing.JSplitPane();
         javax.swing.JPanel pnlAreaDesplegable = new javax.swing.JPanel();
         javax.swing.JTabbedPane tabTrabajo = new javax.swing.JTabbedPane();
         javax.swing.JPanel pnlProyectos = new javax.swing.JPanel();
         javax.swing.JPanel pnlArchivos = new javax.swing.JPanel();
         javax.swing.JPanel pnlAreaRenderizadora = new javax.swing.JPanel();
-        javax.swing.JTabbedPane tabAreas = new PnlAreaDeTrabajo();
+        javax.swing.JTabbedPane tabAreas = new org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo();
         javax.swing.JLabel lblMsgCorto = new javax.swing.JLabel();
         javax.swing.JLabel lblMsgInformtivo = new javax.swing.JLabel();
         javax.swing.JMenuBar barMenuPrincipal = new javax.swing.JMenuBar();
@@ -56,7 +63,26 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JMenu mnuConfig = new javax.swing.JMenu();
         javax.swing.JMenuItem itmOpcionesGenerales = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmCambiarIdioma = new javax.swing.JMenuItem();
-        javax.swing.JMenuItem itmCambiarTema = new javax.swing.JMenuItem();
+        javax.swing.JMenu mnuCambiarTema = new javax.swing.JMenu();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem4 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JPopupMenu.Separator jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem5 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem6 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem7 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem8 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem9 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem10 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem11 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem12 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem13 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem14 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem15 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem16 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem17 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JMenu mnuCabiarApariencia = new javax.swing.JMenu();
         javax.swing.JMenu mnuAyuda = new javax.swing.JMenu();
         javax.swing.JMenuItem itmAcercaDe = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmDonativo = new javax.swing.JMenuItem();
@@ -170,14 +196,179 @@ public class MenuPrincipal extends javax.swing.JFrame
         itmCambiarIdioma.setText(bundle.getString("MenuPrincipal.itmCambiarIdioma.text")); // NOI18N
         mnuConfig.add(itmCambiarIdioma);
 
-        itmCambiarTema.setText(bundle.getString("MenuPrincipal.itmCambiarTema.text")); // NOI18N
-        mnuConfig.add(itmCambiarTema);
+        mnuCambiarTema.setText(bundle.getString("MenuPrincipal.mnuCambiarTema.text")); // NOI18N
+
+        look_feel.add(jRadioButtonMenuItem1);
+        jRadioButtonMenuItem1.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem1.text")); // NOI18N
+        jRadioButtonMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem1);
+
+        look_feel.add(jRadioButtonMenuItem2);
+        jRadioButtonMenuItem2.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem2.text")); // NOI18N
+        jRadioButtonMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem2);
+
+        look_feel.add(jRadioButtonMenuItem3);
+        jRadioButtonMenuItem3.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem3.text")); // NOI18N
+        jRadioButtonMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem3);
+
+        look_feel.add(jRadioButtonMenuItem4);
+        jRadioButtonMenuItem4.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem4.text")); // NOI18N
+        jRadioButtonMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem4);
+        mnuCambiarTema.add(jSeparator1);
+
+        look_feel.add(jRadioButtonMenuItem5);
+        jRadioButtonMenuItem5.setSelected(true);
+        jRadioButtonMenuItem5.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem5.text")); // NOI18N
+        jRadioButtonMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem5);
+
+        look_feel.add(jRadioButtonMenuItem6);
+        jRadioButtonMenuItem6.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem6.text")); // NOI18N
+        jRadioButtonMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem6);
+
+        look_feel.add(jRadioButtonMenuItem7);
+        jRadioButtonMenuItem7.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem7.text")); // NOI18N
+        jRadioButtonMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem7);
+
+        look_feel.add(jRadioButtonMenuItem8);
+        jRadioButtonMenuItem8.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem8.text")); // NOI18N
+        jRadioButtonMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem8);
+
+        look_feel.add(jRadioButtonMenuItem9);
+        jRadioButtonMenuItem9.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem9.text")); // NOI18N
+        jRadioButtonMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem9);
+
+        look_feel.add(jRadioButtonMenuItem10);
+        jRadioButtonMenuItem10.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem10.text")); // NOI18N
+        jRadioButtonMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem10);
+
+        look_feel.add(jRadioButtonMenuItem11);
+        jRadioButtonMenuItem11.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem11.text")); // NOI18N
+        jRadioButtonMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem11);
+
+        look_feel.add(jRadioButtonMenuItem12);
+        jRadioButtonMenuItem12.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem12.text")); // NOI18N
+        jRadioButtonMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem12);
+
+        look_feel.add(jRadioButtonMenuItem13);
+        jRadioButtonMenuItem13.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem13.text")); // NOI18N
+        jRadioButtonMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem13);
+
+        look_feel.add(jRadioButtonMenuItem14);
+        jRadioButtonMenuItem14.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem14.text")); // NOI18N
+        jRadioButtonMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem14);
+
+        look_feel.add(jRadioButtonMenuItem15);
+        jRadioButtonMenuItem15.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem15.text")); // NOI18N
+        jRadioButtonMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem15);
+
+        look_feel.add(jRadioButtonMenuItem16);
+        jRadioButtonMenuItem16.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem16.text")); // NOI18N
+        jRadioButtonMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem16);
+
+        look_feel.add(jRadioButtonMenuItem17);
+        jRadioButtonMenuItem17.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem17.text")); // NOI18N
+        jRadioButtonMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem17);
+
+        mnuConfig.add(mnuCambiarTema);
+
+        mnuCabiarApariencia.setText(bundle.getString("MenuPrincipal.mnuCabiarApariencia.text")); // NOI18N
+        mnuConfig.add(mnuCabiarApariencia);
 
         barMenuPrincipal.add(mnuConfig);
 
         mnuAyuda.setText(bundle.getString("MenuPrincipal.mnuAyuda.text")); // NOI18N
 
+        itmAcercaDe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
         itmAcercaDe.setText(bundle.getString("MenuPrincipal.itmAcercaDe.text")); // NOI18N
+        itmAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmAcercaDeActionPerformed(evt);
+            }
+        });
         mnuAyuda.add(itmAcercaDe);
 
         itmDonativo.setText(bundle.getString("MenuPrincipal.itmDonativo.text")); // NOI18N
@@ -210,7 +401,11 @@ public class MenuPrincipal extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 //<editor-fold defaultstate="collapsed" desc="Funciones Privadas">
-    public void cerrandoPrograma()
+
+    /**
+     *
+     */
+        public void cerrandoPrograma()
     {
         //Verficando tabs sin guardar y los pasos correspondientes para cerrar,
         //guardando estados importantes
@@ -221,6 +416,56 @@ public class MenuPrincipal extends javax.swing.JFrame
         cerrandoPrograma();
     }//GEN-LAST:event_itmSalirActionPerformed
 
+    private void itmAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAcercaDeActionPerformed
+        new AcercaDe(this, true).setVisible(true);
+    }//GEN-LAST:event_itmAcercaDeActionPerformed
+
+    private void cambiarTema(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarTema
+        try
+        {
+            JRadioButtonMenuItem look=(JRadioButtonMenuItem) evt.getSource();
+            cambiarLookFeel(GUIProperties.obtenerLookFeel(look.getText().toLowerCase()));
+        }
+        catch(Exception e)
+        {
+            
+        }
+       
+        
+        //JOptionPane.showMessageDialog(this, "Cambiando a tema: "+look.getText(), "Informacion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_cambiarTema
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+    private void cambiarLookFeel(String look)
+    {
+        try
+        {
+            System.out.println(look);
+            if(look!=null && !look.isEmpty())
+            {
+                UIManager.setLookAndFeel(look);
+                VeaXML.reinicarVentana();
+            }
+        }
+        catch(ClassNotFoundException | InstantiationException |
+            IllegalAccessException | UnsupportedLookAndFeelException e)
+        {
+            
+            JOptionPane.showMessageDialog(this, e.getMessage(), "",
+                JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    private void cambiarTema(String tema)
+    {
+        try
+        {
+            
+        }
+        catch(Exception e)
+        {
+            
+        }
+    }
 }

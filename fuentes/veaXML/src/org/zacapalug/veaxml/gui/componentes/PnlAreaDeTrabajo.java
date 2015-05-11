@@ -25,6 +25,10 @@ import org.zacapalug.veaxml.gui.PanelInicio;
  */
 public class PnlAreaDeTrabajo extends JTabbedPane
 {   
+
+    /**
+     *
+     */
     public PnlAreaDeTrabajo()
     {
         

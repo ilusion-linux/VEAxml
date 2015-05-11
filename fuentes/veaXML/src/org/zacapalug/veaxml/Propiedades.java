@@ -14,27 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.zacapalug.veaxml.gui.componentes;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+package org.zacapalug.veaxml;
 
 /**
  *
  * @author ghots
  */
-public class PnlPanelDeTrabajoTab extends JPanel
+public class Propiedades
 {
 
     /**
      *
-     * @param area
-     * @param panel
      */
-    public PnlPanelDeTrabajoTab(PnlAreaDeTrabajo area, PnlPanelDeTrabajo panel)
-    {   
-        this.setOpaque(false);
-        this.add(new JLabel(area.getTitleAt(area.indexOfComponent(panel))));
-        this.add(new BtnCerrarPanel(area, panel));
+    public static void cargarPropiedades()
+    {
+        
     }
 }

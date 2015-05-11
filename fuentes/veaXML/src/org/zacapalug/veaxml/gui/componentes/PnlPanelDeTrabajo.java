@@ -30,12 +30,20 @@ public class PnlPanelDeTrabajo extends JPanel
     private boolean confirmar;
 //</editor-fold>
     
+    /**
+     *
+     * @param area
+     */
     public PnlPanelDeTrabajo(PnlAreaDeTrabajo area)
     {
         this.area=area;
     }
 //<editor-fold defaultstate="collapsed" desc="Funciones Publicas">
-    public void cerrarPanel()
+
+    /**
+     *
+     */
+        public void cerrarPanel()
     {
         /*
         Opciones pertinentes al cierre de un documento,
@@ -43,11 +51,18 @@ public class PnlPanelDeTrabajo extends JPanel
         confirmar=true;
     }
     
+    /**
+     *
+     * @return
+     */
     public boolean confirmarCierre()
     {
         return confirmar;
     }
     
+    /**
+     *
+     */
     public void personalizarTab()
     {
         area.setTabComponentAt(area.indexOfComponent(this),

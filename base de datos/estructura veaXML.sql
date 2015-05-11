@@ -210,51 +210,53 @@ insert into estructura_componentes(id_estructura, id_componente, default) values
 --simpleContent
 insert into estructura_componentes(id_estructura, id_componente, default) values(4, 1,      null);
 --restriction
-insert into estructura_componentes(id_estructura, id_componente, default) values(4, 25,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(4, 1,      null);
---extension
 insert into estructura_componentes(id_estructura, id_componente, default) values(5, 25,     null);
 insert into estructura_componentes(id_estructura, id_componente, default) values(5, 1,      null);
---complexContent
+--extension
 insert into estructura_componentes(id_estructura, id_componente, default) values(6, 25,     null);
 insert into estructura_componentes(id_estructura, id_componente, default) values(6, 1,      null);
+--complexContent
+insert into estructura_componentes(id_estructura, id_componente, default) values(7, 25,     null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(7, 1,      null);
 --openContent
-insert into estructura_componentes(id_estructura, id_componente, default) values(7, 1,      null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(7, 26,     'interleave');
---attributeGroup
-insert into estructura_componentes(id_estructura, id_componente, default) values(7, 1,      null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(7, 5,      null);
---group
 insert into estructura_componentes(id_estructura, id_componente, default) values(8, 1,      null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(8, 13,     '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(8, 14,     '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(8, 15,     '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(8, 15,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(8, 5,      null);
---all
-insert into estructura_componentes(id_estructura, id_componente, default) values(9, 27,     '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(9, 28,     '1');
---choice
+insert into estructura_componentes(id_estructura, id_componente, default) values(8, 26,     'interleave');
+--attributeGroup
+insert into estructura_componentes(id_estructura, id_componente, default) values(9, 1,      null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(9, 5,      null);
+--group
 insert into estructura_componentes(id_estructura, id_componente, default) values(10, 1,     null);
 insert into estructura_componentes(id_estructura, id_componente, default) values(10, 13,    '1');
 insert into estructura_componentes(id_estructura, id_componente, default) values(10, 14,    '1');
 insert into estructura_componentes(id_estructura, id_componente, default) values(10, 15,    '1');
---sequence
-insert into estructura_componentes(id_estructura, id_componente, default) values(11, 1,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(11, 13,    '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(11, 14,    '1');
-insert into estructura_componentes(id_estructura, id_componente, default) values(11, 15,    '1');
---simpleType
+insert into estructura_componentes(id_estructura, id_componente, default) values(10, 15,    null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(10, 5,     null);
+--all
+insert into estructura_componentes(id_estructura, id_componente, default) values(11, 27,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(11, 28,    '1');
+--choice
 insert into estructura_componentes(id_estructura, id_componente, default) values(12, 1,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(12, 29,    null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(12, 30,    null);
---list
+insert into estructura_componentes(id_estructura, id_componente, default) values(12, 13,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(12, 14,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(12, 15,    '1');
+--sequence
 insert into estructura_componentes(id_estructura, id_componente, default) values(13, 1,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(13, 31,    null);
---union
+insert into estructura_componentes(id_estructura, id_componente, default) values(13, 13,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(13, 14,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(13, 15,    '1');
+--simpleType
 insert into estructura_componentes(id_estructura, id_componente, default) values(14, 1,     null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(14, 32,    null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(14, 29,    null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(14, 30,    null);
+--list
+insert into estructura_componentes(id_estructura, id_componente, default) values(15, 1,     null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(15, 31,    null);
+--union
+insert into estructura_componentes(id_estructura, id_componente, default) values(16, 1,     null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(16, 32,    null);
 --any
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 1,    null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 1,    null);
 --
 --
 --

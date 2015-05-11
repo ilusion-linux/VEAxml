@@ -43,12 +43,17 @@ public class BtnCerrarPanel extends JButton implements ActionListener, MouseList
     
     private final String KEY_TITLE="BtnCerrarPanel.mensaje";
     private final ResourceBundle IDOMA=ResourceBundle.getBundle(
-        "org/zacapalug/veaxml/gui/idiomas/MenuPrincipal");
+        "org/zacapalug/veaxml/gui/idiomas/Extra");
     
     private final PnlAreaDeTrabajo area;
     private final PnlPanelDeTrabajo panel;
     //</editor-fold>
 
+    /**
+     *
+     * @param area
+     * @param panel
+     */
     public BtnCerrarPanel(PnlAreaDeTrabajo area, PnlPanelDeTrabajo panel)
     {   
         this.area=area;
