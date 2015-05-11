@@ -43,7 +43,7 @@ public class GUIProperties
     /**
      *
      */
-        public static final String PLAF_METAL="javax.swing.plaf.metal.MetalLookAndFeel";
+    public static final String PLAF_METAL="javax.swing.plaf.metal.MetalLookAndFeel";
 
     /**
      *
@@ -124,6 +124,7 @@ public class GUIProperties
      *
      */
     public static final String PLAF_TEXTURE="com.jtattoo.plaf.texture.TextureLookAndFeel";
+    public static final String PLAF_QUAQUA="ch.randelshofer.quaqua.QuaquaLookAndFeel";
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Temas disponibles por tema">
 
@@ -232,14 +233,14 @@ public class GUIProperties
         return theme;
     }
 //</editor-fold>
-//<editor-fold defaultstate="collapsed" desc="Variables que determinan el look and feel utilizado">
+//<editor-fold defaultstate="collapsed" desc="Funciones que determinan el look and feel utilizado">
 
     /**
      *
      * @param nombre
      * @return
      */
-        public static String obtenerLookFeel(String nombre)
+    public static String obtenerLookFeel(String nombre)
     {
         if(PLAF_METAL.contains(nombre))
         {
@@ -253,7 +254,7 @@ public class GUIProperties
         {
             return PLAF_MOTIF;
         }
-        else if(PLAF_SYSTEM.contains(nombre))
+        else if(nombre.equals("system"))
         {
             return PLAF_SYSTEM;
         }
@@ -308,6 +309,10 @@ public class GUIProperties
         else if(PLAF_TEXTURE.contains(nombre))
         {
             return PLAF_TEXTURE;
+        }
+        else if(PLAF_QUAQUA.contains(nombre))
+        {
+            return PLAF_QUAQUA;
         }
         else
         {

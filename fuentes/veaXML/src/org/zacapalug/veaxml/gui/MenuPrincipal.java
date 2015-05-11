@@ -15,7 +15,6 @@
  */
 package org.zacapalug.veaxml.gui;
 
-import java.awt.Rectangle;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.UIManager;
@@ -69,6 +68,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem4 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JPopupMenu.Separator jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem18 = new javax.swing.JRadioButtonMenuItem();
+        javax.swing.JPopupMenu.Separator jSeparator2 = new javax.swing.JPopupMenu.Separator();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem5 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem6 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem7 = new javax.swing.JRadioButtonMenuItem();
@@ -234,6 +235,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         });
         mnuCambiarTema.add(jRadioButtonMenuItem4);
         mnuCambiarTema.add(jSeparator1);
+
+        jRadioButtonMenuItem18.setSelected(true);
+        jRadioButtonMenuItem18.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem18.text")); // NOI18N
+        jRadioButtonMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarTema(evt);
+            }
+        });
+        mnuCambiarTema.add(jRadioButtonMenuItem18);
+        mnuCambiarTema.add(jSeparator2);
 
         look_feel.add(jRadioButtonMenuItem5);
         jRadioButtonMenuItem5.setSelected(true);
@@ -430,9 +441,6 @@ public class MenuPrincipal extends javax.swing.JFrame
         {
             
         }
-       
-        
-        //JOptionPane.showMessageDialog(this, "Cambiando a tema: "+look.getText(), "Informacion", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cambiarTema
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -441,7 +449,6 @@ public class MenuPrincipal extends javax.swing.JFrame
     {
         try
         {
-            System.out.println(look);
             if(look!=null && !look.isEmpty())
             {
                 UIManager.setLookAndFeel(look);
