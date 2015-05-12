@@ -15,8 +15,10 @@
  */
 package org.zacapalug.veaxml.gui;
 
+import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.GUIProperties;
@@ -47,7 +49,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JPanel pnlProyectos = new javax.swing.JPanel();
         javax.swing.JPanel pnlArchivos = new javax.swing.JPanel();
         javax.swing.JPanel pnlAreaRenderizadora = new javax.swing.JPanel();
-        javax.swing.JTabbedPane tabAreas = new org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo();
+        tabAreas = new org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo();
         javax.swing.JLabel lblMsgCorto = new javax.swing.JLabel();
         javax.swing.JLabel lblMsgInformtivo = new javax.swing.JLabel();
         javax.swing.JMenuBar barMenuPrincipal = new javax.swing.JMenuBar();
@@ -444,7 +446,26 @@ public class MenuPrincipal extends javax.swing.JFrame
     }//GEN-LAST:event_cambiarTema
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTabbedPane tabAreas;
     // End of variables declaration//GEN-END:variables
+    public Component[] obtenerArea()
+    {
+        return this.tabAreas.getComponents();
+    }
+    
+    public void establecerArea(Component[] componentes)
+    {
+        for(Component componente : componentes)
+        {
+            this.tabAreas.add(componente);
+        }
+    }
+            
+    public void limpiarArea()
+    {
+        this.tabAreas.removeAll();
+    }
+    
     private void cambiarLookFeel(String look)
     {
         try

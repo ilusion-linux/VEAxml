@@ -15,6 +15,7 @@
  */
 package org.zacapalug.veaxml;
 
+import java.awt.Component;
 import java.awt.Rectangle;
 import org.zacapalug.veaxml.gui.MenuPrincipal;
 
@@ -57,10 +58,14 @@ public class VeaXML
      */
     public static void reinicarVentana()
     {
+        Component [] componentes=principal.obtenerArea();
+        
         Rectangle savedBounds=principal.getBounds();
         principal.dispose();
         
         principal=new MenuPrincipal();
+        principal.limpiarArea();
+        principal.establecerArea(componentes);
         principal.setBounds(savedBounds);
         principal.setVisible(true);
     }
