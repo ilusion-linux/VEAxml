@@ -70,4 +70,15 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <target name="-pre-compile">
+        <delete file="veaXML.sqlite"></delete>
+        <delete file="${dist.dir}/${application.title}.zip"></delete>
+    </target>
+    <target name='-post-compile'>
+        <copy file="../../base-de-datos/veaXML.sqlite" toDir="." />
+    </target>
+    <target name='-post-jar'> 
+        <copy file="veaXML.sqlite" toDir="${dist.dir}" />
+        <zip destfile="${dist.dir}/${application.title}.zip" basedir="${dist.dir}" />
+    </target>
 </project>

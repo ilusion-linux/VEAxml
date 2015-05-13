@@ -92,7 +92,7 @@ public class BaseDeDatos
 //<editor-fold defaultstate="collapsed" desc="Obtencion de datos">
     public Map<String, String> obtenerParametros()
     {
-        return obtenerConsulta("alumnos", NOMBRE_PROPIEDAD, VALOR_PROPIEDAD);
+        return obtenerConsulta("propiedad", NOMBRE_PROPIEDAD, VALOR_PROPIEDAD);
     }
     
     public Map<String, String> obtenerHistorial()

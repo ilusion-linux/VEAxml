@@ -5,10 +5,10 @@ insert into propiedad(propiedad, valor) values('programa.ejecucion_primera', '0'
 insert into propiedad(propiedad, valor) values('ventana.maximizada', '0');
 --0 Si
 --1 No
-insert into propiedad(propiedad, valor) values('ventana.posicion.x', null);
-insert into propiedad(propiedad, valor) values('ventana.posicion.y', null);
-insert into propiedad(propiedad, valor) values('ventana.ancho', null);
-insert into propiedad(propiedad, valor) values('ventana.alto', null);
+insert into propiedad(propiedad, valor) values('ventana.posicion.x', '0');
+insert into propiedad(propiedad, valor) values('ventana.posicion.y', '0');
+insert into propiedad(propiedad, valor) values('ventana.ancho', '0');
+insert into propiedad(propiedad, valor) values('ventana.alto', '0');
 insert into propiedad(propiedad, valor) values('programa.look_and_feel', 'Aluminium');
 insert into propiedad(propiedad, valor) values('programa.tema', 'Default');
 insert into propiedad(propiedad, valor) values('programa.idioma', 'es');

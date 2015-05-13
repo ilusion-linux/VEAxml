@@ -18,7 +18,6 @@ package org.zacapalug.veaxml.gui;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.GUIProperties;
