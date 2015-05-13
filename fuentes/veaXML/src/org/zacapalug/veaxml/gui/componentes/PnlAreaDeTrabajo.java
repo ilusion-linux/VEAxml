@@ -18,6 +18,7 @@ package org.zacapalug.veaxml.gui.componentes;
 
 import javax.swing.JTabbedPane;
 import org.zacapalug.veaxml.gui.PanelInicio;
+import org.zacapalug.veaxml.gui.PanelTrabajo;
 
 /**
  *
@@ -43,5 +44,9 @@ public class PnlAreaDeTrabajo extends JTabbedPane
         PanelInicio inicio3=new PanelInicio(this);
         this.addTab("Panel Inicio 3", inicio3);
         inicio3.personalizarTab();
+        
+        PanelTrabajo inicio4=new PanelTrabajo(this);
+        this.addTab("Panel Inicio 4", inicio4);
+        inicio4.personalizarTab();
     }
 }

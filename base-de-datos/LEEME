@@ -1,6 +1,7 @@
 En este directorio econtrara los archivos .sql necesarios para crear los esquemas de base de datos utilizados por veaXML.
 
-veaXML.sqlite                   base de datos SQLite utiliza para guardas datos de manera local. Se recomienta utilizar el complemente de firefox "SQLite Manager", para su uso y manipulacion.
+veaXML.sqlite                   base de datos SQLite utiliza para guardas datos de manera local.
+                                Se recomienta utilizar el complemente de firefox "SQLite Manager", para su uso y manipulacion.
 veaXML.sql                      contiene el DDL necesario para replicar el esquema.
 definicion de tipos veaXML.sql  contiene el DML necesario para la definicion de tipos, del standar definido para XML Schema (XSD)
 estructura veaXML.sql           contiene el DML necesario para la estructura de elementos, atributos, tipos simples y completos, del standar definido para XML Schema (XSD)

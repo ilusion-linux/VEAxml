@@ -24,6 +24,7 @@ import java.util.Map;
  */
 public class Propiedades
 {
+    public static final String TIPO_XML="txt/xml";
 //<editor-fold defaultstate="collapsed" desc="Variables para nombre de parametros">
     public static final String PROGRAMA_EJECUCION_PRIMERA="programa.ejecucion_primera";
     public static final String PROGRAMA_ESTADO="programa.estado";

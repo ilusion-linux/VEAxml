@@ -1,30 +1,3 @@
-/*
-Schema component is the generic term for the building blocks that make up the abstract data model of the schema. [Definition:]
-An XSD schema is a set of ·schema components·. There are several kinds of schema component, falling into three groups.
-The primary schema components, which may (type definitions) or must (element and attribute declarations) have names, are as follows:
-
-Simple type definitions
-Complex type definitions
-Attribute declarations
-Element declarations
-
-The secondary schema components, are as follows:
-
-Attribute group definitions
-Identity-constraint definitions
-Type alternatives
-Assertions
-Model group definitions
-Notation declarations
-
-Finally, the "helper" schema components provide small parts of other schema components; they are dependent on their context:
-
-Annotations
-Model groups
-Particles
-Wildcards
-Attribute Uses
-*/
 --Estados
 insert into estado(estado) values('Implementado', 'Descripcion');
 insert into estado(estado) values('No implementado', 'Descripcion');
@@ -255,8 +228,11 @@ insert into estructura_componentes(id_estructura, id_componente, default) values
 insert into estructura_componentes(id_estructura, id_componente, default) values(16, 1,     null);
 insert into estructura_componentes(id_estructura, id_componente, default) values(16, 32,    null);
 --any
-insert into estructura_componentes(id_estructura, id_componente, default) values(17, 1,    null);
-insert into estructura_componentes(id_estructura, id_componente, default) values(17, 1,    null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 1,     null);
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 13,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 14,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, 15,    '1');
+insert into estructura_componentes(id_estructura, id_componente, default) values(17, ,    null);
 --
 --
 --

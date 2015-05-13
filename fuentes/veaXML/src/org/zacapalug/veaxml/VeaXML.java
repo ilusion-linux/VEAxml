@@ -15,8 +15,18 @@
  */
 package org.zacapalug.veaxml;
 
+import de.sciss.syntaxpane.DefaultSyntaxKit;
+import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Container;
 import java.awt.Rectangle;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.WindowConstants;
+import javax.swing.border.Border;
 import org.zacapalug.veaxml.gui.MenuPrincipal;
 
 /**
@@ -32,7 +42,30 @@ public class VeaXML
      */
     public static void main(String[] args)
     {
+        JFrame f = new JFrame();
+        final JPanel d=new JPanel();
+        final JPanel c = new JPanel();
+        c.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        c.setLayout(new BorderLayout());
+
+        DefaultSyntaxKit.initKit();
+
+        final JEditorPane codeEditor = new JEditorPane();
+        JScrollPane scrPane = new JScrollPane(codeEditor);
+        c.add(scrPane, BorderLayout.CENTER);
+        c.doLayout();
+        codeEditor.setContentType("text/xml");
+        codeEditor.setText("<humano pais='Guatemala'>soy humano</humano>");
+        
+        d.add(c);
+        f.add(d);
+        
+        f.setSize(800, 600);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        
         Propiedades.cargarPropiedades();
+        
         principal=new MenuPrincipal();
         principal.setVisible(true);
         

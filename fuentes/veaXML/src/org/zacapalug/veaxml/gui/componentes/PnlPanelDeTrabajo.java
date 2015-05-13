@@ -22,7 +22,7 @@ import javax.swing.JPanel;
  *
  * @author ghots
  */
-public class PnlPanelDeTrabajo extends JPanel
+public abstract class PnlPanelDeTrabajo extends JPanel
 {
 //<editor-fold defaultstate="collapsed" desc="Variables">
     private final PnlAreaDeTrabajo area;
