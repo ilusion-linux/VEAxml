@@ -26,27 +26,26 @@ import org.zacapalug.veaxml.gui.PanelTrabajo;
  */
 public class PnlAreaDeTrabajo extends JTabbedPane
 {   
-
     /**
      *
      */
     public PnlAreaDeTrabajo()
     {
-        
         PanelInicio inicio=new PanelInicio(this);
         this.addTab("Panel Inicio", inicio);
         inicio.personalizarTab();
-        
-        PanelInicio inicio2=new PanelInicio(this);
-        this.addTab("Panel Inicio 2", inicio2);
-        inicio2.personalizarTab();
-        
-        PanelInicio inicio3=new PanelInicio(this);
-        this.addTab("Panel Inicio 3", inicio3);
-        inicio3.personalizarTab();
-        
-        PanelTrabajo inicio4=new PanelTrabajo(this);
-        this.addTab("Panel Inicio 4", inicio4);
-        inicio4.personalizarTab();
+    }
+    
+    public boolean abrirDocumento()
+    {
+        return false;
+    }
+    
+    public boolean nuevaArea()
+    {
+        PanelTrabajo trabajo=new PanelTrabajo(this);
+        this.addTab("Nuevo documento", trabajo);
+        trabajo.personalizarTab();
+        return false;
     }
 }

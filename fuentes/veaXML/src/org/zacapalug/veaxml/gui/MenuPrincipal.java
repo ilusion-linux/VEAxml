@@ -22,6 +22,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.GUIProperties;
 import org.zacapalug.veaxml.VeaXML;
+import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
 
 /**
  *
@@ -48,11 +49,12 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JPanel pnlProyectos = new javax.swing.JPanel();
         javax.swing.JPanel pnlArchivos = new javax.swing.JPanel();
         javax.swing.JPanel pnlAreaRenderizadora = new javax.swing.JPanel();
-        tabAreas = new org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo();
+        tabAreas = new PnlAreaDeTrabajo();
         javax.swing.JLabel lblMsgCorto = new javax.swing.JLabel();
         javax.swing.JLabel lblMsgInformtivo = new javax.swing.JLabel();
         javax.swing.JMenuBar barMenuPrincipal = new javax.swing.JMenuBar();
         javax.swing.JMenu mnuArchivo = new javax.swing.JMenu();
+        javax.swing.JMenuItem jMenuItem1 = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmAbrir = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmGuardar = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmGuardarCopia = new javax.swing.JMenuItem();
@@ -158,6 +160,15 @@ public class MenuPrincipal extends javax.swing.JFrame
 
         mnuArchivo.setText(bundle.getString("MenuPrincipal.mnuArchivo.text")); // NOI18N
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText(bundle.getString("MenuPrincipal.jMenuItem1.text_1")); // NOI18N
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevo(evt);
+            }
+        });
+        mnuArchivo.add(jMenuItem1);
+
         itmAbrir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
         itmAbrir.setText(bundle.getString("MenuPrincipal.itmAbrir.text")); // NOI18N
         mnuArchivo.add(itmAbrir);
@@ -237,7 +248,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         mnuCambiarTema.add(jRadioButtonMenuItem4);
         mnuCambiarTema.add(jSeparator1);
 
-        jRadioButtonMenuItem18.setSelected(true);
+        look_feel.add(jRadioButtonMenuItem18);
         jRadioButtonMenuItem18.setText(bundle.getString("MenuPrincipal.jRadioButtonMenuItem18.text")); // NOI18N
         jRadioButtonMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,6 +454,10 @@ public class MenuPrincipal extends javax.swing.JFrame
             
         }
     }//GEN-LAST:event_cambiarTema
+
+    private void nuevo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevo
+        ((PnlAreaDeTrabajo)tabAreas).nuevaArea();
+    }//GEN-LAST:event_nuevo
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane tabAreas;

@@ -16,7 +16,6 @@
  */
 package org.zacapalug.veaxml.gui;
 
-import de.sciss.syntaxpane.DefaultSyntaxKit;
 import java.awt.BorderLayout;
 import javax.swing.JEditorPane;
 import javax.swing.JPanel;
@@ -30,9 +29,12 @@ import org.zacapalug.veaxml.gui.componentes.PnlPanelDeTrabajo;
  */
 public class PanelTrabajo extends PnlPanelDeTrabajo
 {
-
+    private JEditorPane editor;
+    private JScrollPane scroll;
+    
     /**
      * Creates new form PanelTrabajo
+     * @param panelTabs
      */
     public PanelTrabajo(PnlAreaDeTrabajo panelTabs)
     {
@@ -102,23 +104,13 @@ public class PanelTrabajo extends PnlPanelDeTrabajo
     // End of variables declaration//GEN-END:variables
     private void crearVistaCodigo()
     {
-        final JPanel d=new JPanel();
-        final JPanel c = new JPanel();
-        c.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        c.setLayout(new BorderLayout());
-
-        DefaultSyntaxKit.initKit();
-
-        final JEditorPane codeEditor = new JEditorPane();
-        JScrollPane scrPane = new JScrollPane(codeEditor);
-        c.add(scrPane, BorderLayout.CENTER);
-        c.doLayout();
-        codeEditor.setContentType("text/xml");
-        codeEditor.setText("<humano pais='Guatemala'>soy humano</humano>");
+        editor=new JEditorPane();
+        scroll=new JScrollPane(editor);
         
-        d.add(c);
+        editor.setContentType("text/xml");
+        editor.setText("<humano pais='Guatemala'>soy humano</humano>");
         
         vistaCodigo.setLayout(new BorderLayout());
-        vistaCodigo.add(d, BorderLayout.CENTER);
+        vistaCodigo.add(scroll, BorderLayout.CENTER);
     }
 }
