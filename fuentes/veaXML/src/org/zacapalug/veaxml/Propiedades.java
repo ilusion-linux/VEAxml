@@ -64,12 +64,25 @@ public class Propiedades
             {
                 parametros.entrySet().stream().forEach((elemento) ->
                 {
-                    cargarElemento(elemento.getKey(), elemento.getValue());
+                    cargarElemento(elemento.getKey(),
+                        elemento.getValue().toLowerCase());
                 });
             }
 
             DB.cerrar();
         }
+    }
+    
+    public static boolean setProgramaLookAndFeel(String lookAndFeel)
+    {
+        boolean retorno=guardarPropiedad(PROGRAMA_LOOK_AND_FEEL, lookAndFeel);
+        
+        if(retorno==true)
+        {
+            programaLookAndFeel=lookAndFeel;
+        }
+        
+        return retorno;
     }
 
     public static String getProgramaEjecucionPrimera() {
@@ -137,6 +150,7 @@ public class Propiedades
                 programaTema=valor;
                 break;
             case PROGRAMA_LOOK_AND_FEEL:
+                programaLookAndFeel=valor;
                 break;
             case VENTANA_MAXIMIZADA:
                 ventanaMaximizada=valor;
@@ -154,6 +168,19 @@ public class Propiedades
                 ventanaPosicionY=Integer.parseInt(valor);
                 break;
         }
+    }
+    private static boolean guardarPropiedad(String nombre, String valor)
+    {
+        boolean resultado=false;
+                
+        if(DB.conectar()==true)
+        {
+            resultado=DB.actualizarPropiedad(nombre, valor);
+            
+            DB.cerrar();
+        }
+        
+        return resultado;
     }
 //</editor-fold>
 }

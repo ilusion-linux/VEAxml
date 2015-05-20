@@ -17,10 +17,12 @@ package org.zacapalug.veaxml.gui;
 
 import java.awt.Component;
 import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu.Separator;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.GUIProperties;
+import org.zacapalug.veaxml.Propiedades;
 import org.zacapalug.veaxml.VeaXML;
 import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
 
@@ -34,9 +36,11 @@ public class MenuPrincipal extends javax.swing.JFrame
     /**
      * Creates new form MenuPrincipal
      */
-    public MenuPrincipal()
+    public MenuPrincipal(String lookAndFeel)
     {
+        cambiarLookFeel(lookAndFeel.toLowerCase());
         initComponents();
+        seleccionarItemLookAndFeel(lookAndFeel.toLowerCase());
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -65,7 +69,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JMenu mnuConfig = new javax.swing.JMenu();
         javax.swing.JMenuItem itmOpcionesGenerales = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmCambiarIdioma = new javax.swing.JMenuItem();
-        javax.swing.JMenu mnuCambiarTema = new javax.swing.JMenu();
+        mnuCambiarTema = new javax.swing.JMenu();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3 = new javax.swing.JRadioButtonMenuItem();
@@ -424,11 +428,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 //<editor-fold defaultstate="collapsed" desc="Funciones Privadas">
-
-    /**
-     *
-     */
-        public void cerrandoPrograma()
+    public void cerrandoPrograma()
     {
         //Verficando tabs sin guardar y los pasos correspondientes para cerrar,
         //guardando estados importantes
@@ -447,11 +447,17 @@ public class MenuPrincipal extends javax.swing.JFrame
         try
         {
             JRadioButtonMenuItem look=(JRadioButtonMenuItem) evt.getSource();
-            cambiarLookFeel(GUIProperties.obtenerLookFeel(look.getText().toLowerCase()));
+            String lookAndFeel=look.getText().toLowerCase();
+            
+            if(Propiedades.setProgramaLookAndFeel(lookAndFeel)==true)
+            {
+                VeaXML.reinicarVentana();
+            }
         }
         catch(Exception e)
         {
-            
+            JOptionPane.showMessageDialog(this, e.getMessage(),
+                "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cambiarTema
 
@@ -460,6 +466,7 @@ public class MenuPrincipal extends javax.swing.JFrame
     }//GEN-LAST:event_nuevo
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu mnuCambiarTema;
     private javax.swing.JTabbedPane tabAreas;
     // End of variables declaration//GEN-END:variables
     public Component[] obtenerArea()
@@ -484,18 +491,35 @@ public class MenuPrincipal extends javax.swing.JFrame
     {
         try
         {
+            String lookAndFeel=GUIProperties.obtenerLookFeel(look);
+            
             if(look!=null && !look.isEmpty())
             {
-                UIManager.setLookAndFeel(look);
-                VeaXML.reinicarVentana();
+                UIManager.setLookAndFeel(lookAndFeel);
             }
         }
         catch(ClassNotFoundException | InstantiationException |
             IllegalAccessException | UnsupportedLookAndFeelException e)
         {
             
-            JOptionPane.showMessageDialog(this, e.getMessage(), "",
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error",
                 JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    private void seleccionarItemLookAndFeel(String lookAndFeel)
+    {
+        for (Component component : mnuCambiarTema.getMenuComponents())
+        {
+            if((component instanceof Separator)==false)
+            {
+                JRadioButtonMenuItem look=(JRadioButtonMenuItem)component;
+
+                if(look.getText().equalsIgnoreCase(lookAndFeel))
+                {
+                    look.setSelected(true);
+                }
+            }
         }
     }
     

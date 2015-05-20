@@ -118,6 +118,10 @@
                   <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuCambiarTema.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+              </AuxValues>
               <SubComponents>
                 <MenuItem class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItem1">
                   <Properties>
@@ -453,7 +457,7 @@
     <Container class="javax.swing.JSplitPane" name="pnlAreaTrabajo">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="oneTouchExpandable" type="boolean" value="true"/>
       </Properties>

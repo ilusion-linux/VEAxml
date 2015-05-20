@@ -18,7 +18,6 @@ package org.zacapalug.veaxml.gui;
 
 import java.awt.BorderLayout;
 import javax.swing.JEditorPane;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
 import org.zacapalug.veaxml.gui.componentes.PnlPanelDeTrabajo;

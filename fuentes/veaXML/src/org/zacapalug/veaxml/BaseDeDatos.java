@@ -23,6 +23,7 @@ import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,6 +35,9 @@ public class BaseDeDatos
     private final String PROPERTIES="BaseDeDatos";
     private final String NOMBRE_KEY="base_de_datos.nombre";
     private final String DRIVER_KEY="base_de_datos.driver";
+    
+    private final String TABLA_PROPIEDAD="propiedad";
+    private final String TABLA_HISTORIAL="historial";
     
     private final String NOMBRE_PROPIEDAD="propiedad";
     private final String VALOR_PROPIEDAD="valor";
@@ -92,16 +96,44 @@ public class BaseDeDatos
 //<editor-fold defaultstate="collapsed" desc="Obtencion de datos">
     public Map<String, String> obtenerParametros()
     {
-        return obtenerConsulta("propiedad", NOMBRE_PROPIEDAD, VALOR_PROPIEDAD);
+        return obtenerConsulta(TABLA_PROPIEDAD, NOMBRE_PROPIEDAD, VALOR_PROPIEDAD);
     }
     
     public Map<String, String> obtenerHistorial()
     {
-        return obtenerConsulta("historial", DOCUMENTO_HISTORIAL,
+        return obtenerConsulta(TABLA_HISTORIAL, DOCUMENTO_HISTORIAL,
             ACCION_HISTORIAL);
+    }
+    
+    public boolean actualizarPropiedad(String nombre, String valor)
+    {
+        return ejecutarUpdate(TABLA_PROPIEDAD, nombre, valor, NOMBRE_PROPIEDAD,
+            VALOR_PROPIEDAD);
     }
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Ejecucion de SQL">
+    private boolean ejecutarUpdate(String tabla, String nombre, String valor,
+        String campoNombre, String CampoValor)
+    {
+        String sql="update "+tabla+" set "+CampoValor+"=? where "+campoNombre+"=?";
+        
+        try
+        {
+            PreparedStatement st=conexion.prepareStatement(sql);
+            st.setString(1, valor);
+            st.setString(2, nombre);
+
+            return st.executeUpdate()==1;
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "ERROR",
+                JOptionPane.ERROR_MESSAGE);
+        }
+        
+        return false;
+    }
+    
     private Map<String, String> obtenerConsulta(String tabla, String nombre,
         String valor)
     {
@@ -125,7 +157,8 @@ public class BaseDeDatos
         {
             retorno.clear();
             
-            System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage(), "ERROR",
+                JOptionPane.ERROR_MESSAGE);
         }
         
         return retorno;

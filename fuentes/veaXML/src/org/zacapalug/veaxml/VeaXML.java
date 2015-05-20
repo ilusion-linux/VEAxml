@@ -37,7 +37,7 @@ public class VeaXML
         
         Propiedades.cargarPropiedades();
         
-        principal=new MenuPrincipal();
+        principal=new MenuPrincipal(Propiedades.getProgramaLookAndFeel());
         principal.setVisible(true);
         
         Runtime.getRuntime().addShutdownHook(new Thread()
@@ -67,7 +67,7 @@ public class VeaXML
         Rectangle savedBounds=principal.getBounds();
         principal.dispose();
         
-        principal=new MenuPrincipal();
+        principal=new MenuPrincipal(Propiedades.getProgramaLookAndFeel());
         principal.limpiarArea();
         principal.establecerArea(componentes);
         principal.setBounds(savedBounds);
