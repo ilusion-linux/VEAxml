@@ -18,16 +18,20 @@ package org.zacapalug.veaxml;
 import de.sciss.syntaxpane.DefaultSyntaxKit;
 import java.awt.Component;
 import java.awt.Rectangle;
+import javax.swing.JOptionPane;
+import javax.swing.LookAndFeel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.gui.MenuPrincipal;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class VeaXML
 {
     private static MenuPrincipal principal;
-    
+
     /**
      * @param args the command line arguments
      */
@@ -36,6 +40,8 @@ public class VeaXML
         DefaultSyntaxKit.initKit();
         
         Propiedades.cargarPropiedades();
+        
+        cambiarLookFeel();
         
         principal=new MenuPrincipal(Propiedades.getProgramaLookAndFeel());
         principal.setVisible(true);
@@ -57,6 +63,40 @@ public class VeaXML
         });
     }
     
+    private static void cambiarLookFeel()
+    {
+        String look=Propiedades.getProgramaLookAndFeel();
+        
+        try
+        {
+            String lookAndFeel=GUIProperties.obtenerLookFeel(look);
+            
+            if(look!=null && !look.isEmpty())
+            {
+                UIManager.setLookAndFeel(lookAndFeel);
+                cambiarTema();
+            }
+        }
+        catch(ClassNotFoundException | InstantiationException |
+            IllegalAccessException | UnsupportedLookAndFeelException e)
+        {
+            
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    private static void cambiarTema()
+    {
+        LookAndFeel look=UIManager.getLookAndFeel();
+        String tema=Propiedades.getProgramaTema();
+        
+        if(look instanceof com.jtattoo.plaf.acryl.AcrylLookAndFeel)
+        {
+            com.jtattoo.plaf.acryl.AcrylLookAndFeel.setTheme(tema);
+        }
+    }
+    
     /**
      *
      */
@@ -67,9 +107,11 @@ public class VeaXML
         Rectangle savedBounds=principal.getBounds();
         principal.dispose();
         
+        cambiarLookFeel();
+        
         principal=new MenuPrincipal(Propiedades.getProgramaLookAndFeel());
-        principal.limpiarArea();
-        principal.establecerArea(componentes);
+        //principal.limpiarArea();
+        //principal.establecerArea(componentes);
         principal.setBounds(savedBounds);
         principal.setVisible(true);
     }

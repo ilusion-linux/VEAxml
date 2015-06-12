@@ -40,7 +40,7 @@ insert into formato_namespace(id_formato, id_namespace) select 2, n.namespace fr
 insert into valor(valor) values('qualified');
 insert into valor(valor) values('unqualified');
 insert into valor(valor) values('unbounded');
-insert into valor(valor) values('all');
+insert into valor(valor) values('#all');
 insert into valor(valor) values('extension');
 insert into valor(valor) values('restriction');
 insert into valor(valor) values('substitution');
@@ -51,6 +51,8 @@ insert into valor(valor) values('0');
 insert into valor(valor) values('1');
 insert into valor(valor) values('list');
 insert into valor(valor) values('union');
+insert into valor(valor) values('##any');
+insert into valor(valor) values('##other');
 
 --Componente
 insert into componente(componente, id_tipo, lista) values('id',                     27,  1);
@@ -85,6 +87,9 @@ insert into componente(componente, id_tipo, lista) values('final',              
 insert into componente(componente, id_tipo, lista) values('final',                  null,0);
 insert into componente(componente, id_tipo, lista) values('itemType',               49,  0);
 insert into componente(componente, id_tipo, lista) values('memberTypes',            49,  1);
+insert into componente(componente, id_tipo, lista) values('namespace',              ,  1);
+insert into componente(componente, id_tipo, lista) values('namespace',              ,  1);
+insert into componente(componente, id_tipo, lista) values('namespace',              ,  1);
 
 --Componente Valor Admitido
 --form: qualified | unqualified
@@ -413,7 +418,7 @@ Model group
 </sequence>
 */
 
-/*
+/*17
 <any
   id = ID
   maxOccurs = (nonNegativeInteger | unbounded)  : 1

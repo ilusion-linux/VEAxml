@@ -364,12 +364,16 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="mnuCabiarApariencia">
+            <Menu class="javax.swing.JMenu" name="mnuCambiarApariencia">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuCabiarApariencia.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="org/zacapalug/veaxml/gui/idiomas/MenuPrincipal.properties" key="MenuPrincipal.mnuCambiarApariencia.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+              </AuxValues>
             </Menu>
           </SubComponents>
         </Menu>

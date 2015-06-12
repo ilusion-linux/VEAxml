@@ -17,7 +17,7 @@ package org.zacapalug.veaxml.gui;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class AcercaDe extends javax.swing.JDialog
 {

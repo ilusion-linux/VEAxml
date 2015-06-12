@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public abstract class PnlPanelDeTrabajo extends JPanel
 {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 ghots
+ * Copyright (C) 2015 ilusion-linux
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ import java.util.Map;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class Propiedades
 {
@@ -79,7 +79,20 @@ public class Propiedades
         
         if(retorno==true)
         {
+            guardarPropiedad(PROGRAMA_TEMA, "Default");
             programaLookAndFeel=lookAndFeel;
+        }
+        
+        return retorno;
+    }
+    
+    public static boolean setProgramaTema(String tema)
+    {
+        boolean retorno=guardarPropiedad(PROGRAMA_TEMA, tema);
+        
+        if(retorno==true)
+        {
+            programaTema=tema;
         }
         
         return retorno;

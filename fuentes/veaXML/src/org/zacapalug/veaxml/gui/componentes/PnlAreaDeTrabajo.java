@@ -22,7 +22,7 @@ import org.zacapalug.veaxml.gui.PanelTrabajo;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class PnlAreaDeTrabajo extends JTabbedPane
 {   

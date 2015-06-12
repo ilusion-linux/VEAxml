@@ -18,7 +18,7 @@ package org.zacapalug.veaxml.analizador.reglas;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class ReglasXML extends Reglas
 {

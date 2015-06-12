@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 ghots
+ * Copyright (C) 2015 ilusion-linux
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ import org.zacapalug.veaxml.gui.componentes.PnlPanelDeTrabajo;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class PanelTrabajo extends PnlPanelDeTrabajo
 {

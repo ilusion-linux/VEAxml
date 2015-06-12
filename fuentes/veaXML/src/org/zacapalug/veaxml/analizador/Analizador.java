@@ -21,7 +21,7 @@ import org.zacapalug.veaxml.analizador.reglas.ReglasXML;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class Analizador
 {

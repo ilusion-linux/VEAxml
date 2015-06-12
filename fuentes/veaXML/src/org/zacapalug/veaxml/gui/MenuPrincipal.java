@@ -16,11 +16,14 @@
 package org.zacapalug.veaxml.gui;
 
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu.Separator;
 import javax.swing.JRadioButtonMenuItem;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import org.zacapalug.veaxml.GUIProperties;
 import org.zacapalug.veaxml.Propiedades;
 import org.zacapalug.veaxml.VeaXML;
@@ -28,19 +31,20 @@ import org.zacapalug.veaxml.gui.componentes.PnlAreaDeTrabajo;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
-public class MenuPrincipal extends javax.swing.JFrame
+public class MenuPrincipal extends javax.swing.JFrame implements ActionListener
 {
+    private ButtonGroup apariencia;
 
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal(String lookAndFeel)
-    {
-        cambiarLookFeel(lookAndFeel.toLowerCase());
+    {   
         initComponents();
         seleccionarItemLookAndFeel(lookAndFeel.toLowerCase());
+        generarOpcionesTema();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -90,7 +94,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem15 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem16 = new javax.swing.JRadioButtonMenuItem();
         javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem17 = new javax.swing.JRadioButtonMenuItem();
-        javax.swing.JMenu mnuCabiarApariencia = new javax.swing.JMenu();
+        mnuCambiarApariencia = new javax.swing.JMenu();
         javax.swing.JMenu mnuAyuda = new javax.swing.JMenu();
         javax.swing.JMenuItem itmAcercaDe = new javax.swing.JMenuItem();
         javax.swing.JMenuItem itmDonativo = new javax.swing.JMenuItem();
@@ -382,8 +386,8 @@ public class MenuPrincipal extends javax.swing.JFrame
 
         mnuConfig.add(mnuCambiarTema);
 
-        mnuCabiarApariencia.setText(bundle.getString("MenuPrincipal.mnuCabiarApariencia.text")); // NOI18N
-        mnuConfig.add(mnuCabiarApariencia);
+        mnuCambiarApariencia.setText(bundle.getString("MenuPrincipal.mnuCambiarApariencia.text")); // NOI18N
+        mnuConfig.add(mnuCambiarApariencia);
 
         barMenuPrincipal.add(mnuConfig);
 
@@ -466,6 +470,7 @@ public class MenuPrincipal extends javax.swing.JFrame
     }//GEN-LAST:event_nuevo
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu mnuCambiarApariencia;
     private javax.swing.JMenu mnuCambiarTema;
     private javax.swing.JTabbedPane tabAreas;
     // End of variables declaration//GEN-END:variables
@@ -487,23 +492,27 @@ public class MenuPrincipal extends javax.swing.JFrame
         this.tabAreas.removeAll();
     }
     
-    private void cambiarLookFeel(String look)
+    private void generarOpcionesTema()
     {
-        try
+        apariencia=new ButtonGroup();
+        mnuCambiarApariencia.removeAll();
+        
+        List temas=GUIProperties.obtenerTemas();
+        
+        if(temas!=null)
         {
-            String lookAndFeel=GUIProperties.obtenerLookFeel(look);
-            
-            if(look!=null && !look.isEmpty())
+            Iterator tema=temas.iterator();
+
+            while(tema.hasNext())
             {
-                UIManager.setLookAndFeel(lookAndFeel);
+                String nombre=(String)tema.next();
+
+                JRadioButtonMenuItem menu=new JRadioButtonMenuItem();
+                menu.setText(nombre);
+
+                apariencia.add(menu);
+                mnuCambiarApariencia.add(menu);
             }
-        }
-        catch(ClassNotFoundException | InstantiationException |
-            IllegalAccessException | UnsupportedLookAndFeelException e)
-        {
-            
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Error",
-                JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -534,4 +543,11 @@ public class MenuPrincipal extends javax.swing.JFrame
             
         }
     }
+//<editor-fold defaultstate="collapsed" desc="Eventos">
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        
+    }
+//</editor-fold>
 }

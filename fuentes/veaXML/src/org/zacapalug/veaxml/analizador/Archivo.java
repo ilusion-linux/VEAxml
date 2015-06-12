@@ -22,7 +22,7 @@ import java.io.InputStream;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class Archivo
 {

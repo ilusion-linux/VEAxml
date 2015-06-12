@@ -18,7 +18,7 @@ package org.zacapalug.veaxml.gui.componentes.elementos;
 
 /**
  *
- * @author ghots
+ * @author ilusion-linux
  */
 public class Contenedor
 {
